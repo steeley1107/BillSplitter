@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="20J-Hw-jJI">
+                                <rect key="frame" x="20" y="118" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="gG0-js-ZzX">
+                                <rect key="frame" x="18" y="156" width="564" height="31"/>
+                                <connections>
+                                    <action selector="splitSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="6E9-Tz-c3x"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIH-gk-ecT">
+                                <rect key="frame" x="251" y="234" width="99" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="99" id="SUj-sn-6Xz"/>
+                                    <constraint firstAttribute="height" constant="30" id="yIP-Ur-74r"/>
+                                </constraints>
+                                <state key="normal" title="Calculate Split">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculateSplitAmount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yru-Ee-YhB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3S-IP-JSI">
+                                <rect key="frame" x="20" y="252" width="560" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgi-z4-x5W">
+                                <rect key="frame" x="279" y="194" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split Bill Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBg-fR-Mh1">
+                                <rect key="frame" x="173" y="27" width="252.5" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter Bill Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7M-u0-w0t">
+                                <rect key="frame" x="234" y="92" width="131.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.074682138994638492" green="0.71471595328951465" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="20J-Hw-jJI" firstAttribute="top" secondItem="P7M-u0-w0t" secondAttribute="bottom" constant="5.5" id="036-Az-fI2"/>
+                            <constraint firstItem="gG0-js-ZzX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1iL-tX-eIF"/>
+                            <constraint firstItem="20J-Hw-jJI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3Fy-Jg-EWY"/>
+                            <constraint firstItem="20J-Hw-jJI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4Du-Bo-8SH"/>
+                            <constraint firstItem="nBg-fR-Mh1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4EX-t7-bJ9"/>
+                            <constraint firstItem="gG0-js-ZzX" firstAttribute="top" secondItem="20J-Hw-jJI" secondAttribute="bottom" constant="8" id="8p3-bb-fto"/>
+                            <constraint firstItem="g3S-IP-JSI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KY5-e2-Zoq"/>
+                            <constraint firstItem="dgi-z4-x5W" firstAttribute="top" secondItem="gG0-js-ZzX" secondAttribute="bottom" constant="8" id="Nlz-d3-XYB"/>
+                            <constraint firstItem="gG0-js-ZzX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="T6Z-tB-nVM"/>
+                            <constraint firstItem="20J-Hw-jJI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XLw-hF-Q0L"/>
+                            <constraint firstItem="nBg-fR-Mh1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="7" id="Zs4-tJ-HxI"/>
+                            <constraint firstItem="P7M-u0-w0t" firstAttribute="top" secondItem="nBg-fR-Mh1" secondAttribute="bottom" constant="33.5" id="aol-bn-HF9"/>
+                            <constraint firstItem="dgi-z4-x5W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="djm-6U-b0X"/>
+                            <constraint firstItem="P7M-u0-w0t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eod-eW-wwg"/>
+                            <constraint firstItem="g3S-IP-JSI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fqM-Lv-ALT"/>
+                            <constraint firstItem="gG0-js-ZzX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gIU-zF-sFn"/>
+                            <constraint firstItem="eIH-gk-ecT" firstAttribute="top" secondItem="dgi-z4-x5W" secondAttribute="bottom" constant="19" id="iXF-lN-pra"/>
+                            <constraint firstItem="eIH-gk-ecT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1" id="s5c-gn-DWm"/>
+                            <constraint firstItem="g3S-IP-JSI" firstAttribute="top" secondItem="eIH-gk-ecT" secondAttribute="bottom" constant="8" id="sem-kt-qd1"/>
+                            <constraint firstItem="g3S-IP-JSI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zHl-Co-ph0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="billAmountLabel" destination="20J-Hw-jJI" id="VmV-AJ-iQz"/>
+                        <outlet property="dividedAmountLabel" destination="g3S-IP-JSI" id="j3b-hg-eQT"/>
+                        <outlet property="numberOfPeopleLabel" destination="dgi-z4-x5W" id="nam-Tj-nd9"/>
+                        <outlet property="numberOfPeopleSlider" destination="gG0-js-ZzX" id="C9u-ad-jbO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="337"/>
+        </scene>
+    </scenes>
+</document>
